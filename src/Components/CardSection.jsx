@@ -4,8 +4,8 @@ const CardSection = () => {
  return (
   <div className="p-4">
  {/* <!-- Your Top Card --> */}
-  <div class="relative z-10 bg-[#7DFDE31A] flex flex-col md:flex-row items-center 
-              w-full max-w-2xl mx-auto mt-4 rounded-2xl p-4 backdrop-blur-md shadow-2xl">
+  <div class="relative z-20 bg-[#7DFDE31A] flex flex-col md:flex-row items-center 
+              w-full max-w-3xl mx-auto mt-4 rounded-2xl p-4 backdrop-blur-md shadow-2xl">
     {/* <!-- Image section --> */}
     <div class="w-full md:w-1/2 p-4 md:p-6">
       <img
@@ -30,15 +30,21 @@ const CardSection = () => {
       </button>
     </div>
   </div>
-  {/* <!-- Background Cards --> */}
-  <div class="absolute  left-0 w-full h-full flex items-center justify-center ">
-    {/* <!-- Card Back 1 --> */}
-    <div class="w-full max-w-2xl mx-auto bg-red-700 
-    rounded-2xl shadow-xl transform rotate-6 translate-x-8 mt-30"></div>
-    {/* <!-- Card Back 2 --> */}
-    {/* <div class="w-full max-w-2xl mx-auto bg-gray-600 opacity-40 rounded-2xl shadow-xl transform -rotate-6 -translate-x-8 absolute"></div> */}
-  </div>
-</div>
+     
+   
+      {/* Overlapping Empty Card 1 */}
+      <div className="bg-[#7DFDE31A]  relative -mt-28 z-10 
+                      max-w-2xl mx-auto h-40 rounded-2xl backdrop-blur-md shadow-xl">
+      </div>
+
+       {/* Overlapping Empty Card 2 */}
+      <div className="bg-[#7DFDE31A]  relative -mt-28 z-0
+                      max-w-xl mx-auto h-40 rounded-2xl backdrop-blur-md shadow-xl">
+      </div>
+
+   </div>
+    
+
 
    
   
