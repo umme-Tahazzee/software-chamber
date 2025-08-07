@@ -1,26 +1,30 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Fustat:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+VN+Guides&family=Roboto+Slab:wght@100..900&family=Sora:wght@100..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap'); */
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: 'Inter', sans-serif;
+  --font-bricolage: 'Bricolage Grotesque', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .font-bricolage {
+    font-family: var(--font-bricolage);
+  }
+  .font-outfit{
+      font-family: var(--font-outfit);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+
 }
+
+.hero {
+  @apply bg-gradient-to-br from-gray-900 to-slate-800 text-white;
+    
+}
+
+
+
