@@ -1,4 +1,5 @@
 
+import CardSection from './CardSection';
 import GradientButton from './Gradient-btn';
 import Navbar from './Navbar'
 import { FaStar } from "react-icons/fa";
@@ -32,6 +33,10 @@ const Hero = () => {
         <button className="mt-8">
          <GradientButton/>
         </button>
+
+        {/* card section  */}
+        <CardSection/>    
+      
       </section>
     </div>
   )
