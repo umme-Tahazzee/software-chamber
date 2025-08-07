@@ -1,27 +1,27 @@
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+"use client";
 
-const Navbar = () => {
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import MobileNav from './MobileNav.';
+import GradientButton from './Gradient-btn';
+
+export default function Navbar() {
+
   return (
-    <nav className='flex justify-between'>
-      <div className='w-30 h-24'>
-         <img src="/images/logo.png" alt="logo"  />
+    <nav className="flex justify-between items-center px-6  ">
+      {/* Logo */}
+      <div className="w-32 h-20">
+        <img src="/images/logo.png" alt="logo" className="w-full h-full object-contain" />
       </div>
-      <div className='flex items-center gap-4 cursor-pointer'>
-              
-          <button className="flex gap-2 font-outfit bg-gradient-to-r from-gray-500 to-zinc-50
-           px-5 py-3
-           rounded-3xl hover:scale-105 transition 
-          "> 
-             <span>Contact Us</span>
-             <FaRegArrowAltCircleRight className="size-6 text-black pt-1"/> 
-          </button>
-          
-          <button className="w-10 h-10 rounded-full border border-gray-500 flex items-center justify-center">
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center gap-4 ">
+        <GradientButton/>
+        <button className="w-10 h-10 rounded-full border border-gray-500 flex items-center justify-center">
           ☰
         </button>
       </div>
-    </nav>
-  )
-}
 
-export default Navbar
+     
+    </nav>
+  );
+}
