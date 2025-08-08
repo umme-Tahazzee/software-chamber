@@ -49,7 +49,7 @@ const Hero = () => {
             className="relative inline-block mr-3"
           /> 
           </span>
-            Team in</span>  <br />
+            Team in</span> <br />
           The Cloud
         </h1>
 
