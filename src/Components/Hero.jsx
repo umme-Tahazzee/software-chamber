@@ -2,15 +2,21 @@ import CardSection from '../material-ui/CardSection';
 import GradientButton from '../material-ui/Gradient-btn';
 import Navbar from './Navbar'
 import { FaStar } from "react-icons/fa";
+import { Dot } from './../material-ui/Dot';
+import  Image  from 'next/image';
 
 
 const Hero = () => {
   return (
     <div className="hero min-h-screen max-w-full p-4 sm:p-6 md:p-10 ">
       <Navbar />
+   
+      {/* content */}
 
-      <section className="text-center py-20 font-bricolage">
-      
+      <section className="text-center py-20 font-bricolage"
+      >
+        <Dot/>
+
         <div
           className="inline-block px-5 py-2 rounded-full text-sm mb-4
           text-white font-inter bg-[radial-gradient(circle,_black_20%,_#2CCEBA_100%)]"
@@ -21,18 +27,37 @@ const Hero = () => {
           </div>
         </div>
 
-      
+
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-widest" >
           <span className="text-[#00FFE0]"> We are your Software</span>
           <br />
-          Development Team in The Cloud
+          <span className="text-transparent bg-clip-text bg-gradient-to-b
+            from-[#00FFE0] to-white "> Development {' '}
+         <span className=""> 
+          <Image
+            src="/images/heroBtn1.png" 
+            alt="heroBtn1"
+            width={48}
+            height={48}
+            className="relative inline-block mr-3"
+          /> 
+           <Image
+           src="/images/heroBtn1.png" 
+            alt="heroBtn2"
+            width={48}
+            height={48}
+            className="relative inline-block mr-3"
+          /> 
+          </span>
+            Team in</span>  <br />
+          The Cloud
         </h1>
 
-      
+
         <div className="flex justify-center m-6">
           <GradientButton />
         </div>
-        
+
         {/* card section  */}
         <CardSection />
 

@@ -9,7 +9,7 @@ const inter = Inter({
 // Setup Bricolage Grotesque
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight : '200',
+  weight :  '300',
   variable: "--font-bricolage",
 });
 
