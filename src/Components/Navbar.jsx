@@ -1,8 +1,8 @@
 "use client";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import MobileNav from './MobileNav.';
-import GradientButton from './Gradient-btn';
+import MobileNav from '../material-ui/MobileNav.';
+import GradientButton from '../material-ui/Gradient-btn';
 
 export default function Navbar() {
 

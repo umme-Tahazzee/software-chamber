@@ -10,8 +10,7 @@ const CardSection = () => {
      <FloatingBtn/>
 
     {/* card section is start  */}
-
-   {/* Top Card with content */}
+    {/* Top Card with content */}
    <div className="relative z-20 bg-[#7DFDE31A] flex flex-col md:flex-row items-center 
               w-full max-w-3xl mx-auto mt-4 rounded-2xl p-4 backdrop-blur-md shadow-2xl border border-[#00FFE0]/20">
 
@@ -50,7 +49,7 @@ const CardSection = () => {
    <div className="bg-[#7DFDE31A] relative -mt-28 z-0
                       max-w-xl mx-auto h-40 rounded-2xl backdrop-blur-md shadow-xl border border-[#00FFE0]/5">
    </div>
-  </div>
+    </div>
  );
 };
 
