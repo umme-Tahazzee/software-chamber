@@ -30,13 +30,16 @@ const Hero = () => {
         </h1>
 
         {/* Button */}
-        <button className="mt-8">
-         <GradientButton/>
-        </button>
+
+        {/* Button */}
+        <div className="flex justify-center m-6">
+          <GradientButton />
+        </div>
+
 
         {/* card section  */}
-        <CardSection/>    
-      
+        <CardSection />
+
       </section>
     </div>
   )
