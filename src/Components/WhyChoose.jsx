@@ -1,6 +1,7 @@
 'use client'
 import { Discuss } from '@/material-ui/Gradient-btn'
 import React from 'react'
+import ChooseCard from './ChooseCard'
 
 const WhyChoose = () => {
   return (
@@ -11,11 +12,15 @@ const WhyChoose = () => {
           <p className='text-[#494949] font-outfit tracking-widest '>Deliver personalized experiences to your
             customers with AI-powered <br/> 
             recommendation engines and dynamic content generation.</p>
-         </div>
-    <div className="flex justify-center m-6">
+            <div className="flex justify-center m-6">
              < Discuss title="Lets Disscus" />
-
           </div>
+       
+         </div>
+
+         {/* card section  */}
+          <ChooseCard/>
+      
 
     </section>
   )
