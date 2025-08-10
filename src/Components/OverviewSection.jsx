@@ -104,10 +104,11 @@ const OverviewSection = () => {
       </div>
 
       {/* feature grid  */}
+      
       {/* heading */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center md:pl-70">
         <div className="flex gap-3">
-          <h1 className="text-7xl font-semibold">Services</h1>
+          <h1 className="text-4xl md:text-9xl  font-semibold">Services</h1>
           <Image
             src="/images/star.png"
             alt="Star Icon"
@@ -124,7 +125,10 @@ const OverviewSection = () => {
              bg-gray-500 rounded-full" />
           </div>
         </div>
+
       </div>
+
+      
       <ServiceCards/>
 
 

@@ -7,16 +7,16 @@ import { motion } from "framer-motion";
 const services = [
   {
     title: "Web & Mobile App Development",
-    desc: "Software Chamber specializes in creating powerful, scalable, and secure e–",
+    desc: "Software Chamber specializes in creating powerful, scalable, and secure e",
   },
   {
     title: "Application Software Services",
-    desc: "Software Chamber specializes in creating powerful, scalable, and secure e–",
+    desc: "Software Chamber specializes in creating powerful, scalable, and secure e",
     active: true,
   },
   {
     title: "Software Coding & Optimuation",
-    desc: "Software Chamber specializes in creating powerful, scalable, and secure e–",
+    desc: "Software Chamber specializes in creating powerful, scalable, and secure e",
   },
 ];
 
@@ -35,7 +35,7 @@ const cardVariants = {
 
 const ServiceCards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto p-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto p-6"> 
       {services.map((service, index) => (
         <motion.div
           key={index}

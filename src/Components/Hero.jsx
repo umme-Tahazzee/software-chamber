@@ -2,10 +2,10 @@
 import CardSection from '../material-ui/CardSection';
 import GradientButton from '../material-ui/Gradient-btn';
 import Navbar from './Navbar';
-import { FaStar } from "react-icons/fa";
 import Particles from '../material-ui/Particles';
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import { MainBtn } from '../material-ui/Gradient-btn';
 
 
 const Hero = () => {
@@ -30,19 +30,8 @@ const Hero = () => {
         <Navbar />
 
         <section className="text-center py-20 font-bricolage">
-          {/* Badge */}
-         <motion.div
-  initial={{ scale: 0.9, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ duration: 0.22 }}
-  className="inline-block px-5 py-2 rounded-full text-sm mb-4
-             text-white font-inter bg-[radial-gradient(circle,_black_20%,_#2CCEBA_100%)]"
->
-  <div className="flex gap-2 items-center justify-center">
-    <FaStar />
-    <span>Smarter Idea, instant solutions</span>
-  </div>
-</motion.div>
+          {/* badge */}
+          <MainBtn title="Smarter Idea, instant solutions" />
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-widest space-y-3">
