@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Hero from '../components/Hero';
-import OverviewSection from '../components/OverviewSection';
-import Process from '../components/Process';
-import WhyChoose from "@/components/WhyChoose";
+
+import Hero from '../Components/Hero';
+import OverviewSection from '../Components/OverviewSection';
+import Process from '../Components/Process';
+import WhyChoose from "@/Components/WhyChoose";
 
 
 export default function Home() {
   return (
       <main className="" >    
-        <Hero/>
-        <OverviewSection/>
+         <Hero/>
+         <OverviewSection/>
          <Process/>
          <WhyChoose/>
       </main>
