@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaStar, FaArrowUp, FaRegArrowAltCircleRight } from "react-icons/fa";
 
-// Main animated button
+// Main (Badge chips pop in with scale from 0.9 to 1 over 220ms)
 export function MainBtn({ title }) {
   return (
     <motion.div

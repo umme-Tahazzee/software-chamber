@@ -4,29 +4,32 @@
 import { FaArrowUp } from "react-icons/fa";
 import { FaSun } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { MdSunny } from "react-icons/md";
+import { IoFlower } from "react-icons/io5";
+import { FaCloud } from "react-icons/fa";
 
 const services = [
  {
   title: "Efficiency",
-  icon: <FaSun className="text-black size-5" />,
+  icon: <FaSun className="text-white size-5 hover:animate-ping" />,
   desc: `Software Chamber specializes in creating powerful, 
     scalable, and secure e-commerce solutions tailored to business needs.`,
  },
  {
   title: "Adaptability",
-  icon: <FaSun />,
+  icon: <FaCloud className="text-white size-5 hover:animate-ping"/>,
   desc: "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
 
  },
  {
   title: "Scalability",
-  icon: <FaSun />,
+  icon: <MdSunny className="text-white size-5 hover:animate-ping" />,
 
   desc: "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
  },
  {
   title: "Precision",
-  icon: <FaSun />,
+  icon: <IoFlower className="text-white size-5 hover:animate-ping"  />,
 
   desc: "Software Chamber specializes in creating powerful, scalable, and secure e-commerce solutions tailored to business needs.",
 
@@ -49,11 +52,11 @@ const cardVariants = {
 
 const ChooseCard = () => {
  return (
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto p-6">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto md:mt-20 p-6">
    {services.map((service, index) => {
     let extraClass = "";
-    if (index === 1) extraClass = "md:top-10 relative"; // 2nd card slight raise
-    if (index === 3) extraClass = "md:top-10 relative"; // 3rd card higher
+    if (index === 1) extraClass = "md:top-10 relative"; 
+    if (index === 3) extraClass = "md:top-10 relative"; 
 
 
     return (
@@ -76,7 +79,8 @@ const ChooseCard = () => {
         {service.title}
        </h2>
        {/* Icon container */}
-       <div className="flex items-center justify-center bg-[#2CCEBA] px-4 mb-2 rounded-full w-12 h-12">
+       <div className="flex items-center justify-center bg-[#2CCEBA] px-4 mb-2 
+       rounded-full w-12 h-12  ">
         {service.icon}
        </div>
       </div>

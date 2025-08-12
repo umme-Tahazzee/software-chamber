@@ -18,9 +18,10 @@ const OverviewSection = () => {
 
 
   return (
-    <section className="min-h-screen max-w-full p-4 sm:p-6 md:p-30 font-bricolage">
+    <section className="max-w-full p-6 md:p-30  
+    font-bricolage ">
       {/* heading  */}
-      <div className="text-center mx-auto mb-12 ">
+      <div className="text-center mx-auto mb-12  ">
         <h1
           className="text-xl md:text-6xl font-bold 
     items-center justify-center gap-2 text-balance tracking-tighter leading-normal cursor-pointer"
@@ -106,9 +107,9 @@ const OverviewSection = () => {
       {/* feature grid  */}
       
       {/* heading */}
-      <div className="flex justify-between items-center md:pl-70">
+      <div className="flex justify-between ">
         <div className="flex gap-3">
-          <h1 className="text-4xl md:text-9xl  font-semibold">Services</h1>
+          <h1 className="text-4xl md:text-6xl  font-semibold">Services</h1>
           <Image
             src="/images/star.png"
             alt="Star Icon"

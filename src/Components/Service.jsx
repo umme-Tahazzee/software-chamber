@@ -48,7 +48,8 @@ const ServiceCards = () => {
             boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
             transition: { duration: 0.18 },
           }}
-          className={`rounded-3xl p-8 relative transition-all duration-300 ease-in-out cursor-pointer ${
+          className={`rounded-3xl p-8 relative transition-all
+             duration-300 ease-in-out cursor-pointer ${
             service.active
               ? "bg-[#1DC9A0] text-white"
               : "bg-gray-100 text-black"

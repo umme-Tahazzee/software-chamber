@@ -10,7 +10,7 @@ import { MainBtn } from '../material-ui/Gradient-btn';
 
 const Hero = () => {
   return (
-    <div className="relative hero min-h-screen max-w-full p-4 sm:p-6 md:p-10 overflow-hidden">
+    <div className="relative hero  max-w-full p-4 sm:p-6 md:p-10 overflow-hidden">
       {/* Background Particles */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Particles

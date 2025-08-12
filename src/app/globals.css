@@ -40,3 +40,63 @@ body {
   border: none;
   display: block;
 }
+
+
+/* Global Animations */
+
+/* Ping Large */
+@keyframes ping-large {
+  75%, 100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* Move Left */
+@keyframes move-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Move Right: content moves left to right (container moves right) */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.animate-scrollRight {
+  animation: scrollRight 30s linear infinite;
+}
+
+/* Move Left: content moves right to left (container moves left) */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrollLeft {
+  animation: scrollLeft 30s linear infinite;
+}
+
+
+
+
+
+/* Animation Utility Classes */
+.ping-large {
+  animation: ping-large 1s ease-in-out infinite;
+}
+
+
