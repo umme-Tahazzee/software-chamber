@@ -19,9 +19,9 @@ const ProcessHeading = () => {
 
  
   {/* Text section */}
-<div className="relative z-10 text-center justify-center items-center py-20 font-bricolage">
-  <div className="space-y-4">
-    <h1 className="text-4xl md:text-7xl font-bold tracking-widest">
+<div className="relative z-10 text-center justify-center items-center py-10 font-bricolage">
+  <div className="space-y-3">
+    <h1 className="text-4xl md:text-5xl font-bold tracking-widest">
       Our Software <br />
       <span className="text-[#A5A5A5]">
         Development Process
@@ -33,7 +33,7 @@ const ProcessHeading = () => {
       engines and dynamic content generation.
     </p>
   </div>
-     <div className="flex justify-center m-6">
+     <div className="flex justify-center m-3">
               <GradientButton />
             </div>
 </div>
