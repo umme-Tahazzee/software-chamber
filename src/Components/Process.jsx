@@ -17,7 +17,7 @@ const Process = () => {
   const r = 140;
 
   return (
-    <div className="relative hero max-w-full overflow-hidden bg-[#041b1c] h-auto px-4">
+    <div className="relative hero max-w-full overflow-hidden bg-[#041b1c] px-4">
       <ProcessHeading />
 
       <div className="relative flex justify-center items-center mt-10 w-full max-w-[700px] mx-auto">
@@ -25,9 +25,9 @@ const Process = () => {
         <Image
           src="/images/globe.png"
           alt="globe"
-          width={600}
-          height={600}
-          className="w-full h-auto"
+          width={800}
+          height={800}
+           className="w-full h-auto mt-12   "
         />
 
         {/* Arc with nodes */}
@@ -37,15 +37,25 @@ const Process = () => {
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid meet"
         >
-          {/* Dotted Arc */}
-          <path
-            d="M 40 180 A 140 140 0 0 1 320 180"
-            stroke="#6FC3B1"
-            strokeWidth="1"
-            strokeDasharray="6 8"
-            fill="none"
-          />
+            {/* Dotted Arc with infinite slow animation */}
+<path
+  d="M 40 180 A 140 140 0 0 1 320 180"
+  stroke="#6FC3B1"
+  strokeWidth="1"
+  strokeDasharray="6 8"
+  fill="none"
+  style={{
+    animation: "dash 4s linear infinite"
+  }}
+/>
 
+<style jsx>{`
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -14; /* sum of dash + gap */
+    }
+  }
+`}</style>
           {/* Steps */}
           {steps.map((step, i) => {
             const angle = Math.PI - (i / (steps.length - 1)) * Math.PI; // radians
@@ -53,7 +63,7 @@ const Process = () => {
             const y = cy - r * Math.sin(angle);
 
             return (
-              <g key={i} className="group cursor-pointer">
+              <g key={i} className="cursor-pointer">
                 {/* Circle */}
                 <circle
                   cx={x}
@@ -74,7 +84,7 @@ const Process = () => {
                 >
                   {step.id}
                 </text>
-                {/* Label - hidden until hover */}
+                {/* Label - always visible */}
                 <text
                   x={x}
                   y={y - 18}
@@ -82,7 +92,7 @@ const Process = () => {
                   fontSize="8"
                   fill={step.color}
                   fontFamily="sans-serif"
-                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  opacity="1"
                 >
                   {step.label}
                 </text>
