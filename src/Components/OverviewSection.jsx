@@ -107,7 +107,7 @@ const OverviewSection = () => {
       {/* feature grid  */}
       
       {/* heading */}
-      <div className="flex justify-between ">
+      <div className="flex justify-between mt-3 ">
         <div className="flex gap-3">
           <h1 className="text-4xl md:text-6xl  font-semibold">Services</h1>
           <Image

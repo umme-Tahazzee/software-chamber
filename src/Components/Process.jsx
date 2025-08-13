@@ -12,24 +12,30 @@ const Process = () => {
     { id: 7, label: "Build", color: "#2DD4BF" },
   ];
 
-  const cx = 180;
+  const cx = 180; // center in viewBox units
   const cy = 180;
   const r = 140;
 
   return (
-    <div className="relative hero max-w-full overflow-hidden bg-[#041b1c] h-auto">
+    <div className="relative hero max-w-full overflow-hidden bg-[#041b1c] h-auto px-4">
       <ProcessHeading />
 
-      <div className="relative flex justify-center items-center mt-30">
+      <div className="relative flex justify-center items-center mt-10 w-full max-w-[700px] mx-auto">
         {/* Globe */}
-        <Image src="/images/globe.png" alt="globe" width={600} height={600} />
+        <Image
+          src="/images/globe.png"
+          alt="globe"
+          width={600}
+          height={600}
+          className="w-full h-auto"
+        />
 
         {/* Arc with nodes */}
         <svg
-          className="absolute w-[660px] h-[750px] top-[-290px]"
+          className="absolute w-full h-auto top-0"
           viewBox="0 0 360 200"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid meet"
         >
           {/* Dotted Arc */}
           <path
@@ -42,20 +48,17 @@ const Process = () => {
 
           {/* Steps */}
           {steps.map((step, i) => {
-            const angle = Math.PI - (i / (steps.length - 1)) * Math.PI;
+            const angle = Math.PI - (i / (steps.length - 1)) * Math.PI; // radians
             const x = cx + r * Math.cos(angle);
             const y = cy - r * Math.sin(angle);
 
             return (
-              <g
-                key={i}
-                className="group cursor-pointer"
-              >
+              <g key={i} className="group cursor-pointer">
                 {/* Circle */}
                 <circle
                   cx={x}
                   cy={y}
-                  r="12"
+                  r="10"
                   fill="#3D3D3D"
                   stroke={step.color}
                   strokeWidth="2"
@@ -63,9 +66,9 @@ const Process = () => {
                 {/* Number */}
                 <text
                   x={x}
-                  y={y + 4}
+                  y={y + 3}
                   textAnchor="middle"
-                  fontSize="10"
+                  fontSize="8"
                   fill="#fff"
                   fontFamily="sans-serif"
                 >
@@ -74,9 +77,9 @@ const Process = () => {
                 {/* Label - hidden until hover */}
                 <text
                   x={x}
-                  y={y - 20}
+                  y={y - 18}
                   textAnchor="middle"
-                  fontSize="10"
+                  fontSize="8"
                   fill={step.color}
                   fontFamily="sans-serif"
                   className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"

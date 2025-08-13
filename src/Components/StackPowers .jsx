@@ -9,11 +9,11 @@ import ToolBoxITem from "@/material-ui/ToolBoxITem";
 
 const StackPowers = () => {
   const btns = [
-    { id: 1, icon: <AiFillSpotify className="size-7 text-green-500" />, name: "Spotify" },
-    { id: 2, icon: <AiFillSpotify className="size-7 text-green-500" />, name: "TalentQl" },
-    { id: 3, icon: <FaDropbox className="size-7 text-blue-600" />, name: "DropBox" },
-    { id: 4, icon: <AiFillSpotify className="size-7 text-[#FC199B]" />, name: "Fliqpay" },
-    { id: 5, icon: <LiaSlackHash className="size-7 text-purple-500" />, name: "Slack" }
+    { id: 1, icon: <AiFillSpotify className="size:4 md:size-7 text-green-500" />, name: "Spotify" },
+    { id: 2, icon: <AiFillSpotify className="size:4 md:size-7 text-green-500" />, name: "TalentQl" },
+    { id: 3, icon: <FaDropbox className="size:4 md:size-7 text-blue-600" />, name: "DropBox" },
+    { id: 4, icon: <AiFillSpotify className="size:4 md:size-7 text-[#FC199B]" />, name: "Fliqpay" },
+    { id: 5, icon: <LiaSlackHash className="size:4 md:size-7 text-purple-500" />, name: "Slack" }
   ];
 
   const categories = [
@@ -40,13 +40,12 @@ const StackPowers = () => {
 
         {/* Buttons */}
         <div className="grid 
-        sm:grid-cols-2 gap-4 p-4 sm:p-6 w-full max-w-md">
+        grid-cols-2 gap-4 p-4 sm:p-6 max-w-md">
         
               {btns.map(({id,name,icon}, index )=>{
                  let extraClass = "";
                if (index === 2) extraClass = "md:-left-10 relative"; 
           if (index === 3) extraClass = "md:-left-10 relative"; 
-
 
                 return (
             <motion.div
@@ -66,12 +65,14 @@ const StackPowers = () => {
                bg-white p-2 rounded-full">
                 {icon}
               </span>
-              <span className="text-xl md:text-2xl" >  {name} </span>
+              <span className="text-md md:text-2xl" >  {name} </span>
             </motion.div>
           )
               })}
   
         </div>
+
+
       </div>
 
       {/* Card Section */}

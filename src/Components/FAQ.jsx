@@ -16,7 +16,7 @@ const FAQ = () => {
       title: "What software development services does your company offer?",
       des:
         "We offer full-cycle software development services including web, mobile, and custom enterprise solutions tailored to your needs.",
-      iconClosed: <IoIosArrowDropdownCircle />,
+      iconClosed: <IoIosArrowDropdownCircle  />,
       iconOpen: <IoIosArrowDropupCircle />,
     },
     {
@@ -116,13 +116,13 @@ const FAQ = () => {
                   id={`faq-header-${index}`}
                   type="button"
                 >
-                  <h2 className="text-lg font-semibold text-gray-800 text-left">
+                  <h2 className="text-xl font-semibold text-gray-800 text-left">
                     {title}
                   </h2>
                   <motion.div
-                    animate={{ rotate: isOpen ? 90 : 0 }}
+                    animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.28 }}
-                    className="flex items-center justify-center bg-[#27B4A3] p-3 rounded-full w-10 h-10"
+                    className="flex items-center justify-center p-3  w-10 h-10"
                   >
                     {React.cloneElement(isOpen ? iconOpen : iconClosed, {
                       className: "text-black w-5 h-5",
